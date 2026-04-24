@@ -48,19 +48,31 @@ const whyChooseUs = [
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      {/* Hero Section */}
-      <section className="hero-gradient text-white py-20 lg:py-32">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Hero Section with Background Image */}
+      <section className="relative min-h-[600px] lg:min-h-[700px] flex items-center">
+        {/* Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ 
+            backgroundImage: `url('/hero-bg.jpg')`,
+          }}
+        >
+          {/* Dark Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/70" />
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 lg:py-32">
           <div className="max-w-3xl">
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               为人才增值
               <br />
               为企业增效
             </h1>
-            <p className="text-xl lg:text-2xl text-white/80 mb-4">
+            <p className="text-xl lg:text-2xl text-white/90 mb-4">
               FUYITE 福伊特企业管理有限公司
             </p>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl">
+            <p className="text-lg text-white/80 mb-8 max-w-2xl">
               专注于人力资源服务，专业于用工方案优化，提供定制化问题解决方案。
               成为值得信赖的人力资源合作伙伴。
             </p>
@@ -191,7 +203,7 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="hero-gradient py-16 lg:py-20">
+      <section className="py-16 lg:py-20 bg-primary">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             准备好与福伊特合作了吗？

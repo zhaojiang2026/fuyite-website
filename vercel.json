@@ -1,8 +1,5 @@
 {
   "buildCommand": "pnpm install && pnpm next build",
   "installCommand": "pnpm install",
-  "framework": "nextjs",
-  "buildEnv": {
-    "NODE_VERSION": "20"
-  }
+  "framework": "nextjs"
 }
